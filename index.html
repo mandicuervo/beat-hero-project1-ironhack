@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="icon" type="image/x-icon" href="./images/midi-icon.png">
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>Beat Hero</title>
+  </head>
+
+  <body>
+    <div class="bg-video">
+      <video id="bg-game" autoplay loop muted plays-inline src="./images/bg-beathero.mp4" type="video/mp4"></video>
+    </div>
+
+    <div id="content-container">
+      <div id="display-game"  class="transparent">
+        <div id="speaker-container">
+          <h1 class="title">Beat Hero</h1>
+          <img id="speaker-img" src="./images/speaker.png" alt="speaker">
+          <p id="score-container"><span id="score">0</span></p>
+        </div>
+
+        <div id="game-board">
+          <canvas id="canvas" width="800" height="580"></canvas>
+          <div id="green-pad"></div>
+          <div id="red-pad"></div>
+          <div id="yellow-pad"></div>
+          <div id="blue-pad"></div>
+          <div id="orange-pad"></div>
+          <button class="pause" id="pause-button">PAUSE</button>
+        </div>
+      </div>
+    </div>
+    
+    <div id="menu-page">
+      <h1>Welcome to Beat Hero</h1>
+      <div id="menu-buttons">
+        <button id="choose-button" class="menu">Choose your Song</button>
+        <button id= 'lab-button' class="menu">LAB Music</button>
+        <button id= 'how-button' class="menu">How To Play</button>
+        <button id= 'about-button' class="menu">About the Game</button>
+      </div>
+    </div>
+
+    <div class= "transparent" id="choose-page">
+      <div class="list">
+        <button class= "menu" id="passionfruit-btn">Passionfruit</button>
+        <button class= "menu" id="la-combi-btn">La Combi Versace</button>
+        <button class= "menu" id="clint-eastwood-btn">Clint Eastwood</button>
+        <button class= "menu" id="paper-planes-button">Paper Planes</button>
+      </div>
+      <div class="back-button4">
+        <button class="menu" id="back-button4">BACK TO MENU</button>
+      </div>
+    </div>
+
+    <div id="about-page" class="transparent">
+      <h2>ABOUT THE GAME</h1>
+          <p>
+              xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+          </p>
+          <button class="menu" id="back-button">BACK TO MENU</button>
+  </div>
+
+  <div id="how-page" class="transparent">
+    <h2>HOW TO PLAY</h1>
+        <p>PLAYING WITH RHYTHM</p>
+        <div>
+            <ul>
+                <li>PRESS A - GREEN</li>
+                <li>PRESS S - RED</li>
+                <li>PRESS J - YELLOW</li>
+                <li>PRESS K - BLUE</li>
+                <li>PRESS L - ORANGE</li>
+            </ul>
+        </div>            
+        <p>INSTRUCTIONS</p>
+        <ul>
+            <li>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</li>
+            <li>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</li>
+        </ul>   
+        <button class="menu" id="back-button2">BACK TO MENU</button>
+</div>
+
+<div id="congrats" class="transparent">
+  <h3>CONGRATS!</h3>
+  <h3>You have <span id="points-fase">X</span> points</h3>
+  <button class="menu" id="back-button3" onclick="window.location.reload()">TRY AGAIN</button>
+  
+</div>
+
+<div id="game-over" class="transparent">
+  <div class="text" id="text-score">
+    <h1>GAME OVER!!!</h1>
+    <h2>You made <span id="score-game-over">x</span> points</h2>
+  </div>
+  <div class="text" id="try-agin">
+    <h3>Don't worry, you can try again.</h3>
+    <button class="menu" id="back-button3" onclick="window.location.reload()">TRY AGAIN</button>
+  </div>
+</div>
+
+    <script src="js/background.js"></script>
+    <script src="js/songs.js"></script>
+    <script src="js/drums.js"></script>
+    <script src="js/padSquare.js"></script>
+    <script src="js/pad.js"></script>
+    <script src="js/obstacle.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/game2.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
