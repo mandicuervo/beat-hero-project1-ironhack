@@ -109,13 +109,30 @@ class Game {
             return this.pad.squares.some(square => {
                 if (obs.collide(square)) {
                     if(this.pad.movements[square.key]) {
+                        const message = document.getElementById('message');
+
                         this.obstacles.splice(i, 1)
                         if(Math.abs(obs.y - square.y) > 30) {
                             this.score += 5;
+                            message.innerText = 'AMAZING!';
+                            message.classList.remove('transparent');
+                            setTimeout(() => {
+                                message.classList.add('transparent');
+                            }, 300)
                         } else if (Math.abs(obs.y - square.y) > 10) {
                             this.score += 15;
+                            message.innerText = 'GREAT!';
+                            message.classList.remove('transparent');
+                            setTimeout(() => {
+                                message.classList.add('transparent');
+                            }, 300)
                         } else {
                             this.score += 30;
+                            message.innerText = 'NICE!';
+                            message.classList.remove('transparent');
+                            setTimeout(() => {
+                                message.classList.add('transparent');
+                            }, 300)
                         } 
 
                         const pad = this.domPads[square.key];

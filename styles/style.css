@@ -42,16 +42,30 @@ video {
 }
 
 #display-game {
-  margin-top: -10px;
   position: relative;
   display: flex;
-  width: 98vw;
-  justify-content: space-between;
+  width: 100vw;
+  height: 100vh;
+  justify-content: space-around;
   align-items: center;
 }
 
+#message-container {
+  position: absolute;
+  top: 2%;
+  right: 31%;
+}
+
+#message {
+  color: white;
+  font-size: 30px;
+}
+
 #speaker-container {
+  display: flex;
+  align-items: center;
   position: relative;
+  height: 100%;
 }
 
 #score-container {
@@ -63,7 +77,7 @@ video {
 }
 
 #speaker-img {
-  width: 280px;
+  width: 330px;
 }
 
 #game-board {
