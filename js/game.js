@@ -34,10 +34,14 @@ class Game {
         this.winSong.src = "./music/win-song.wav"; 
     }
 
-    start () {
-        setTimeout(() => {
-             this.gameSong.play()
-        }, this.songObj.timeToStartSong)
+    start (isPaused = false) {
+        if(!isPaused) {
+            setTimeout(() => {
+                this.gameSong.play()
+            }, this.songObj.timeToStartSong)
+        } else {
+            this.gameSong.play()
+        }
         this.intervalId = setInterval(() => {
             this.addNegativePoints()
             this.clear();

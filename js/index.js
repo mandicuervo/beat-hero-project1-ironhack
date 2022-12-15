@@ -23,7 +23,9 @@ const backButton2 = document.getElementById('back-button2');//back button in how
 
 
 //lab music
-const labButton = document.getElementById('lab-button'); //lab music button
+const labButton = document.getElementById('lab-button'); 
+const labPage = document.getElementById('lab-page'); 
+const backButton5 = document.getElementById('back-button5'); //back to menu button in lab paeg
 
 //choose your song page and buttons
 const chooseButton = document.getElementById('choose-button'); 
@@ -39,7 +41,8 @@ const paperPlanesBtn = document.getElementById('paper-planes-button');
 const gameOver = document.getElementById('game-over'); //game over page
 const backButton3 = document.getElementById('back-button3'); //back to menu in game over page 'try again'
 
-//pause button
+//speaker container in display game page
+const speakerContainer = document.getElementById('speaker-container')
 
 //choose your song button in menu page to go choose your song page
 chooseButton.addEventListener('click', () => {
@@ -66,12 +69,6 @@ laCombiVersaceBtn.addEventListener('click', () => {
   game.start()
 });
 
-clintEastwoodBtn.addEventListener('click', () => {
-  songsPage.classList.add('transparent');
-  displayGame.classList.remove('transparent')
-  game = new Game('canvas', clintEastwood);
-  game.start()
-});
 
 paperPlanesBtn.addEventListener('click', () => {
   songsPage.classList.add('transparent');
@@ -92,7 +89,6 @@ backButton.addEventListener('click', () => {
   menuPage.classList.remove('transparent');
 });
 
-
 //how to play button in menu page to go to the how to play page
 howButton.addEventListener('click', () => {
   menuPage.classList.add('transparent');
@@ -105,15 +101,20 @@ backButton2.addEventListener('click', () => {
   menuPage.classList.remove('transparent');
 });
 
-
-
 //lab button in menu page 
 labButton.addEventListener('click', () => {
-  console.log('entra')
+  speakerContainer.style.display =  'none'
   menuPage.classList.add('transparent');
   displayGame.classList.remove('transparent')
+  labPage.classList.remove('transparent')
   game = new Game2('canvas', disco);
   game.start()
+});
+
+//back to menu in LAB PAGE
+backButton5.addEventListener('click', () => {
+  labPage.classList.add('transparent');
+  menuPage.classList.remove('transparent');
 });
 
 //PAUSE BUTTON/PLAY BUTTON
@@ -125,7 +126,7 @@ document.addEventListener('keydown', (event) => {
       game.pause()
       pauseButton.innerText = 'PLAY';
     } else {
-      game.start()
+      game.start(true)
       pauseButton.innerText = 'PAUSE';
     }
   } else {

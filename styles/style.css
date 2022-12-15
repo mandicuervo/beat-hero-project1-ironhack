@@ -1,9 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Kosugi+Maru&display=swap');
 
 body {
   color: white;
   padding: 0;
   margin: 0;
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+  font-family: 'Kosugi Maru', sans-serif;
 }
 
 .bg-video {
@@ -31,6 +32,13 @@ video {
   width: 98vw;
   height: 98vh;
   position: absolute;
+}
+
+#menu-page p {
+  font-family: 'Bungee Inline', cursive;
+  font-size: 150px;
+  margin: 0;
+  margin-top: -100px;
 }
 
 #display-game {
@@ -145,23 +153,59 @@ video {
   text-align: center;
 }
 
-#menu-buttons {
+
+.list {
   display: flex;
   flex-direction: column;
   gap: 20px
+}
+
+#back-button4 {
+  margin-top: 50px;
+  min-width: 300px;
+  background-color: rgba(173, 13, 212, 0.73);
 }
 
 #about-page{
   z-index: 5;
   position: absolute;
   width: 98vw;
-  height: 95vh;
+  height: 98vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-bg {
+  font-size: large;
+  width: 60vw;
+  height: 60vh;
   margin: 0 auto;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  background-color: rgba(155, 33, 248, 0.707);
+  border-radius: 20px;
+}
+
+#about-page button {
+  background-color: rgba(47, 8, 148, 0.73);
+ }
+
+.how-bg {
+  font-size: large;
+  width: 40vw;
+  height: 80vh;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: rgba(155, 33, 248, 0.707);
+  border-radius: 20px;
 }
 
 #how-page {
@@ -177,11 +221,31 @@ video {
   text-align: center;
 }
 
+#how-page button {
+  background-color: rgba(47, 8, 148, 0.73);
+}
+
+#lab-page {
+  z-index: 5;
+  position: absolute;
+  right: 5%;
+  height: 98vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 20px;
+}
+
+#lab-page button {
+  min-width: 300px;
+ }
+
 #game-over {
   z-index: 5;
   position: absolute;
-  width: 95vw;
-  height: 80vh;
+  width: 98vw;
+  height: 95vh;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -192,8 +256,8 @@ video {
 #congrats {
   z-index: 5;
   position: absolute;
-  width: 95vw;
-  height: 80vh;
+  width: 98vw;
+  height: 95vh;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -205,7 +269,7 @@ video {
   z-index: 5;
   position: absolute;
   width: 95vw;
-  height: 80vh;
+  height: 95vh;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -213,20 +277,36 @@ video {
   text-align: center;
 }
 
+#menu-buttons {
+  margin-top: -70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+#menu-buttons button {
+ min-width: 300px;
+}
+
+.list button {
+  min-width: 300px;
+ }
+
 .menu {
-  padding: 10px 100px;
-  gap: 10px;
+  padding: 10px 20px;
   border: none;
   color: whitesmoke;
   font-size: large;
-  background-color:rgba(255, 255, 255, 0.404);
+  background-color:rgba(147, 61, 246, 0.803);
   border-radius: 10px;
+  font-family: 'Kosugi Maru', sans-serif;
 }
 
 .menu:hover {
   text-shadow: 0px 0px 25px rgb(214, 255, 51);
   color: #ffffff;
-  box-shadow: #bc28c2 0px 15px 25px;
+  box-shadow: #f7f3f7 0px 15px 25px;
 }
 
 .transparent {
