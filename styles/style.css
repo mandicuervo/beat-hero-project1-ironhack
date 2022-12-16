@@ -66,6 +66,7 @@ video {
   align-items: center;
   position: relative;
   height: 100%;
+  color: rgb(136, 0, 255);
 }
 
 #score-container {
@@ -77,7 +78,7 @@ video {
 }
 
 #speaker-img {
-  width: 330px;
+  width: 300px;
 }
 
 #game-board {
@@ -91,12 +92,12 @@ video {
   position: absolute;
   width: 80px;
   height: 50px;
-  background-color: rgba(215, 215, 140, 0.773);
+  background-color: rgba(14, 22, 112, 0.773);
   position: absolute;
   bottom: 55px;
   left: 45px;
   border-style: none;
-  color: rgba(66, 11, 117, 0.679);
+  color: rgba(222, 217, 226, 0.679);
   border-radius: 200px;
 }
 
@@ -155,6 +156,11 @@ video {
   border-radius: 6px;
 }
 
+#speaker-light {
+  width: 100px;
+  height: 200px;
+}
+
 #menu-page{
   z-index: 5;
   position: absolute;
@@ -210,7 +216,7 @@ video {
 
 .how-bg {
   font-size: large;
-  width: 40vw;
+  width: 50vw;
   height: 80vh;
   margin: 0 auto;
   display: flex;
@@ -265,6 +271,15 @@ video {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  font-size: large;
+}
+
+#game-over h1 {
+  font-family: 'Bungee Inline', cursive;
+}
+
+#game-over span {
+  font-family: 'Bungee Inline', cursive;
 }
 
 #congrats {

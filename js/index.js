@@ -34,8 +34,6 @@ const backButton4 = document.getElementById('back-button4'); //back to menu in c
 //songs buttons
 const passionfruitBtn = document.getElementById('passionfruit-btn'); 
 const laCombiVersaceBtn = document.getElementById('la-combi-btn'); 
-const clintEastwoodBtn = document.getElementById('clint-eastwood-btn'); 
-const paperPlanesBtn = document.getElementById('paper-planes-button');  
 
 //game over page and button
 const gameOver = document.getElementById('game-over'); //game over page
@@ -69,14 +67,6 @@ laCombiVersaceBtn.addEventListener('click', () => {
   game.start()
 });
 
-
-paperPlanesBtn.addEventListener('click', () => {
-  songsPage.classList.add('transparent');
-  displayGame.classList.remove('transparent')
-  game = new Game('canvas', paperPlanes);
-  game.start()
-});
-
 //about the game button in menu page to go about page
 aboutBtn.addEventListener('click', () => {
   menuPage.classList.add('transparent');
@@ -103,11 +93,12 @@ backButton2.addEventListener('click', () => {
 
 //lab button in menu page 
 labButton.addEventListener('click', () => {
-  speakerContainer.style.display =  'none'
+  speakerContainer.style.display =  'none';
   menuPage.classList.add('transparent');
-  displayGame.classList.remove('transparent')
+  displayGame.classList.remove('transparent');
+  displayGame.style.justifyContent = 'flex-start';
   labPage.classList.remove('transparent')
-  game = new Game2('canvas', disco);
+  game = new Game2('canvas', hiphop);
   game.start()
 });
 
