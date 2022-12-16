@@ -1,4 +1,4 @@
-const electronic = [
+const eletronic = [
 './music/deep-drum.wav',
 './music/deep-drum-two.wav',
 './music/deep-piano.wav',

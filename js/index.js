@@ -93,6 +93,7 @@ backButton2.addEventListener('click', () => {
 
 //lab button in menu page 
 labButton.addEventListener('click', () => {
+  pauseButton.classList.add('transparent');
   speakerContainer.style.display =  'none';
   menuPage.classList.add('transparent');
   displayGame.classList.remove('transparent');
@@ -102,6 +103,26 @@ labButton.addEventListener('click', () => {
   game.start()
 });
 
+//lab style buttons
+const hiphopBtn = document.getElementById('hip-hop');
+const electronicBtn = document.getElementById('electronic');
+
+electronicBtn.addEventListener('click', () => {
+  electronicBtn.classList.add('selected')
+  hiphopBtn.classList.remove('selected')
+  if(game) game.pause()
+  game = new Game2('canvas', eletronic);
+  game.start()
+})
+
+hiphopBtn.addEventListener('click', () => {
+  hiphopBtn.classList.add('selected')
+  electronicBtn.classList.remove('selected')
+  if(game) game.pause()
+  game = new Game2('canvas', hiphop);
+  game.start()
+})
+
 //back to menu in LAB PAGE
 backButton5.addEventListener('click', () => {
   labPage.classList.add('transparent');
@@ -110,7 +131,6 @@ backButton5.addEventListener('click', () => {
 
 //PAUSE BUTTON/PLAY BUTTON
 document.addEventListener('keydown', (event) => {
-  console.log(event.keyCode)
   if (event.keyCode === 32) {
     event.preventDefault();
     if(pauseButton.innerText === 'PAUSE') {

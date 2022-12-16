@@ -46,39 +46,53 @@ video {
   display: flex;
   width: 100vw;
   height: 100vh;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 }
 
 #message-container {
+  margin: 0;
   position: absolute;
-  top: 2%;
-  right: 31%;
+  top: 4%;
+  left: 90px;
+  width: 300px;
+  display: flex;
+  justify-content: center;
 }
 
 #message {
-  color: white;
-  font-size: 30px;
+  margin: 0;
+  font-family: 'Bungee Inline', cursive;
+  color: #FFFFFF;
+  font-size: 50px;
+  text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px, #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px, #FF2D95 0px 0px 75px;
 }
 
 #speaker-container {
+  padding-left: 100px;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   position: relative;
   height: 100%;
   color: rgb(136, 0, 255);
 }
 
 #score-container {
+  width: 130px;
+  display: flex;
+  justify-content: center;
+  font-family: 'Bungee Inline', cursive;
+  color: #FFFFFF;
+  text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px, #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px, #FF2D95 0px 0px 75px;
   position: absolute;
-  bottom: 31%;
-  right: 45%;
+  bottom: 16%;
+  left: 46%;
   color: rgb(245, 21, 237);
   font-size: xx-large;
 }
 
 #speaker-img {
-  width: 300px;
+  width: 280px;
 }
 
 #game-board {
@@ -156,11 +170,6 @@ video {
   border-radius: 6px;
 }
 
-#speaker-light {
-  width: 100px;
-  height: 200px;
-}
-
 #menu-page{
   z-index: 5;
   position: absolute;
@@ -212,7 +221,24 @@ video {
 
 #about-page button {
   background-color: rgba(47, 8, 148, 0.73);
- }
+}
+
+.title-about {
+  margin-top: -10px;
+}
+
+.text-about {
+  margin-top: -60px;
+}
+
+#back-button {
+  margin-top: 10px;
+}
+
+.title-about {
+  font-family: 'Bungee Inline', cursive;
+  font-size: 50px;
+}
 
 .how-bg {
   font-size: large;
@@ -245,6 +271,20 @@ video {
   background-color: rgba(47, 8, 148, 0.73);
 }
 
+.title-how {
+  font-family: 'Bungee Inline', cursive;
+  font-size: 50px;
+  margin-top: -10px;
+}
+
+#back-button2 {
+  margin-top: 10px;
+}
+
+.instructions {
+  margin-top: -90px;
+}
+
 #lab-page {
   z-index: 5;
   position: absolute;
@@ -274,12 +314,19 @@ video {
   font-size: large;
 }
 
-#game-over h1 {
+#game-over p {
+  margin: 0;
   font-family: 'Bungee Inline', cursive;
+  font-size: 80px;
+  margin-bottom: -30px;
 }
 
 #game-over span {
   font-family: 'Bungee Inline', cursive;
+}
+
+#back-button3 {
+  margin-top: 30px;
 }
 
 #congrats {
@@ -292,6 +339,18 @@ video {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  font-size: xx-large;
+}
+
+#congrats p {
+  font-family: 'Bungee Inline', cursive;
+  font-size: 80px;
+  margin: 0;
+  margin-bottom: -30px;
+}
+
+#congrats span {
+  font-family: 'Bungee Inline', cursive;
 }
 
 #choose-page {
@@ -340,4 +399,10 @@ video {
 
 .transparent {
   visibility: hidden;
+}
+
+.selected {
+  text-shadow: 0px 0px 25px rgb(214, 255, 51);
+  color: #ffffff;
+  box-shadow: #f7f3f7 0px 15px 25px;
 }

@@ -30,4 +30,11 @@ class Game2 {
         this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
     }
 
+    pause() {
+        this.pad.greenSound.pause()
+        this.pad.redSound.pause()
+        this.pad.yellowSound.pause()
+        this.pad.blueSound.pause()
+        this.pad.orangeSound.pause()
+    }
 }

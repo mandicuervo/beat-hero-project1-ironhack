@@ -20,6 +20,9 @@
     <div id="content-container">
       <div id="display-game"  class="transparent">
         <div id="speaker-container">
+          <div id="message-container">
+            <p id="message" class="transparent">GREAT!</p>
+          </div>
           <img id="speaker-img" src="./images/speaker.png" alt="speaker">
           <p id="score-container"><span id="score">0</span></p>
         </div>
@@ -36,14 +39,11 @@
         </div>
 
         <div id="lab-page" class= "transparent">
-          <button class= "menu" id="two">Hip Hop</button>
-          <button class= "menu" id="three">Deep House</button>
+          <button class= "menu" id="hip-hop">Hip Hop</button>
+          <button class= "menu" id="electronic">Electronic</button>
           <button class= "menu" id="back-button5" onclick="window.location.reload()">BACK TO MENU</button>
         </div>
 
-        <div id="message-container">
-          <p id="message" class="transparent">GREAT!</p>
-        </div>
       </div>
     </div>
     
@@ -67,14 +67,14 @@
 
     <div id="about-page" class="transparent">
       <div class="about-bg">
-        <h2>ABOUT THE GAME</h1>
-            <p>
+        <p class="title-about">ABOUT THE GAME</p>
+            <p class="text-about">
               This game was developed by Amanda Cuervo Sutil<br>and it is inspired by Guitar Hero Game.<br>
               It was developed as part of my Ironhack Web Development Bootcamp.<br>
               The technologies used in this game are HTML5, CSS3 and Javascript ES6.<br>
               All the code was done from scratch.<br>
               I hope you enjoy playing this game as much as I enjoyed working on it.<br>
-              Amanda Cuervo - Deciembre, 2022.
+              Amanda Cuervo - December, 2022.
             </p>
             <button class="menu" id="back-button">BACK TO MENU</button>
       </div>
@@ -82,9 +82,8 @@
 
   <div id="how-page" class="transparent">
     <div class="how-bg">
-      <h2>HOW TO PLAY</h1>
-        <div id = instructions>       
-          <p>INSTRUCTIONS</p>
+      <p class="title-how">HOW TO PLAY</p>
+        <div class= "instructions">"       
           <p>
             Colored squares will start to scroll down from the top.<br>
             When they meet their corresponding buttons on the midi<br>
@@ -106,7 +105,7 @@
 </div>
 
 <div id="congrats" class="transparent">
-  <h3>CONGRATS!</h3>
+  <p>CONGRATS!</p>
   <h3>You have <span id="points-fase">X</span> points</h3>
   <button class="menu" id="back-button3" onclick="window.location.reload()">TRY AGAIN</button>
   
@@ -114,8 +113,8 @@
 
 <div id="game-over" class="transparent">
   <div class="text" id="text-score">
-    <h1>GAME OVER!!!</h1>
-    <h2>You made <span id="score-game-over">x</span> points</h2>
+    <p>GAME OVER!!!</p>
+    <h3>You made <span id="score-game-over">x</span> points</h3>
   </div>
   <div class="text" id="try-agin">
     <h3>Don't worry, you can try again.</h3>

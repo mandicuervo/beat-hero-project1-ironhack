@@ -61,6 +61,7 @@ class Pad {
 
     onKeyEvent(event) {
         const status = event.type === "keydown";
+        console.log(event.type)
 
         if (event.type === 'keydown') {
             this.clickSound.play();
